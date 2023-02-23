@@ -4,15 +4,14 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-    <title>Лабаратория двигателей</title>
+    <title>Лаборатория двигателей</title>
 
-    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
     <link rel="stylesheet" type="text/css" href="./css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Mulish:wght@200;300;400;500;600&display=swap"
-     rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <script type="text/javascript" src="./js./phonemask.min.js"></script>
 
@@ -21,101 +20,98 @@
 
   <body>
     <div class="container">
-      <div class="scrollbar">
-        <div class="scrollbar__content">
-          <span class="scrollbar__caption">
-            scroll down
-          </span>
+      <div class="scrollbar container__scrollbar">
+        <span class="scrollbar__caption">
+          scroll down
+        </span>
 
-          <div class="scrollbar__scale"></div>
+        <div class="scrollbar__scale"></div>
 
-          <div class="scrollbar__image">
-            <img src="./assets/icons/mouse.svg" alt="Компьютерная мышь с индикатором прокрутки." />
+        <div class="scrollbar__container">
+          <img class="scrollbar__image" src="./assets/icons/mouse.svg" alt="Компьютерная мышь с индикатором прокрутки." />
 
-            <span class="scrollbar__indicator"></span>
-          </div>
+          <span class="scrollbar__indicator"></span>
         </div>
       </div>
 
       <div>
         <header class="header">
-          <div class="header__section header__section-top">
-            <a href="#">
-              <img src="./assets/logo.svg" alt="На главную страницу." />
+          <div class="header__section header__section_top">
+            <a class="logo" href="#">
+              <img class="logo__image" src="./assets/logo.svg" alt="На главную страницу." />
             </a>
+            <div class="header__group">
+              <div class="header__item">
+                  Ремонтируем двигатели <br />
+                  Hyundai и Kia с 2012 года
+              </div>
 
-            <div>
-              <span>
-                Ремонтируем двигатели <br />
-                Hyundai и Kia с 2012 года
-              </span>
-            </div>
+              <div class="header__item">
+                <img class="header__icon" src="./assets/icons/map.svg" alt="Местоположение на карте." />
 
-            <div>
-              <img src="./assets/icons/map.svg" alt="Местоположение на карте." />
+                <address class="address">
+                  Адрес автоцентра: <span class="address__city">Москва,</span><br/> 
+                  <span class="header__text-mobile">Шоссейный проезд, с4 а/2</span>
+                </address>
+              </div>
 
-              <address class="address">
-                Адрес автоцентра: <span class="address__city">Москва,</span><br/> 
-                <span class="address__body">Шоссейный проезд, с4 а/2</span>
-              </address>
-            </div>
+              <button class="header__item header__item_bold">
+                <img class="header__icon" src="./assets/icons/map-marker.svg" alt="Маркер местоположения." />
 
-            <button>
-              <img src="./assets/icons/map-marker.svg" alt="Маркер местоположения." />
+                <span class="header__text">Смотреть на карте</span>
+              </button>
 
-              <span>Смотреть на карте</span>
-            </button>
+              <button class="header__item header__item_bold" type="button">
+                <img class="header__icon header__image" src="./assets/icons/calculator.svg" alt="Иконка калькулятора." />
 
-            <button type="button">
-              <img src="./assets/icons/calculator.svg" alt="Иконка калькулятора." />
+                <div>
+                  <span class="header__text">Рассчитать стоимость</span>
 
-              <span>Рассчитать стоимость</span>
+                  <br/>
 
-              <br/>
+                  <span class="header__text">ремонта за <span class="header__text-mobile">45 сек</span></span>
+                </div>
+              </button>
 
-              <span>ремонта за 45 сек</span>
-            </button>
+              <div class="header__item">       
+                <span>Задайте вопрос, <br /> мы сейчас онлайн</span>
 
-            <div>       
-              <span>Задайте вопрос, <br /> мы сейчас онлайн</span>
-
-              <div>
-                <a href="https://www.whatsapp.com/?lang=ru">
-                  <img src="./assets/icons/whatsapp.svg" alt="Cсылка на вотсапп" />
+                <a class="header__socials" href="https://www.whatsapp.com/?lang=ru">
+                  <img class="header__image" src="./assets/icons/whatsapp.svg" alt="Cсылка на вотсапп" />
                 </a>
 
-                <a href="https://web.telegram.org/k/">
-                  <img src="./assets/icons/telegram.svg" alt="Cсылка на телеграм." />
+                <a class="header__socials" href="https://web.telegram.org/k/">
+                  <img class="header__image" src="./assets/icons/telegram.svg" alt="Cсылка на телеграм." />
                 </a>
                 
-                <a href="https://www.viber.com/ru/">   
-                  <img src="./assets/icons/viber.svg" alt="Cсылка на вайбер." />
+                <a class="header__socials" href="https://www.viber.com/ru/">   
+                  <img class="header__image" src="./assets/icons/viber.svg" alt="Cсылка на вайбер." />
                 </a>
               </div>
             </div>
 
-            <div>
-              <span>
+            <div class="contacts">
+              <span class="contacts__text">
                 Звоните Пн-Сб 10:00 - 21:00 
               </span>
 
-              <div>
+              <div class="contacts__phone">
                 <a href="tel:+79251033330">
                   +7 (925) 103 33 30
                 </a>
 
-                <img src="./assets/icons/arrow-down.svg" alt="Иконка выпадающего списка." />
+                <img class="contacts__icon" src="./assets/icons/arrow-down.svg" alt="Иконка выпадающего списка." />
               </div>
 
-              <button type="button">
+              <button class="contacts__button" type="button">
                 Заказать звонок
 
-                <img src="./assets/icons/phone.svg" alt="Иконка телефона." />
+                <img class="contacts__image" src="./assets/icons/phone.svg" alt="Иконка телефона." />
               </button>
             </div>
           </div>
 
-          <div class="header__section header__section-bottom">
+          <div class="header__section header__section_bottom">
             <nav>
               <ul>
                 <li>
