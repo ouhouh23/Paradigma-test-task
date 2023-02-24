@@ -55,7 +55,7 @@
                 </address>
               </div>
 
-              <div class="map">
+              <div class="map" data-map-body>
                 <button class="header__item header__item_bold">
                   <img class="header__icon" src="./assets/icons/map-marker.svg" alt="Маркер местоположения." />
 
@@ -109,7 +109,7 @@
                 <img class="contacts__icon" src="./assets/icons/arrow-down.svg" alt="Иконка выпадающего списка." />
               </div>
 
-              <button class="contacts__button header__text" type="button">
+              <button class="contacts__button header__text" type="button" data-application-button>
                 Заказать звонок
 
                 <img class="contacts__image" src="./assets/icons/phone.svg" alt="Иконка телефона." />
@@ -162,7 +162,6 @@
 
         <main>
           <section class="hero">
-            <!-- <img class="hero__image" src="./assets/background.png" alt="" /> -->
             <div class="hero__content">
               <div class="hero__container">
                 <h1 class="hero__heading">
@@ -241,53 +240,75 @@
       </div>
     </div>
 
-    <div class="popup">
-      <div class="popup__container"></div>
+    <div class="popup" data-application>
+      <div class="popup__container" data-popup-container></div>
 
-      <div class="popup__content">
-        <button class="popup__button" type="button">
-          <img src="./assets/icons/close.svg" alt="Иконка закрытия." />
+      <div class="popup__content application">
+        <button class="popup__button" type="button" data-popup-close>
+          <img class="popup__icon" src="./assets/icons/close.svg" alt="Иконка закрытия." />
         </button>
-        <div class="popup__group">
-          <h2 class="popup__heading">
-            Быстро оставить заявку
+        <div class="application__group" data-popup-content>
+          <h2 class="application__heading">
+            Быстро оставить <br /> заявку
           </h2>
 
-          <p class="popup__text">
-            Введите номер — позвоним вам <br />
-            в течение 5-10 минут в рабочее время
+          <p class="application__text">
+            Введите номер — позвоним вам в <br />
+            течение 5-10 минут в рабочее время
           </p>
 
-          <form action="#">
-            <label for="input-phone">
+          <form class="application__form" action="#" data-application-form>
+            <label class="application__tooltip" for="input-phone">
               Введите ваш номер телефона
             </label>
 
             <input 
               type="tel" 
               id="input-phone" 
+              class="application__input" 
               name="phone" 
-              value="+7 (___) ___ - __ - __" 
-              mask="+7 (___) ___ - __ - __" 
-              placeholder="+7 (___) ___ - __ - __"
+              value="+7 (_ _ _) _ _ _ - _ _ - _ _" 
+              mask="+7 (_ _ _) _ _ _ - _ _ - _ _" 
+              placeholder="+7 (_ _ _) _ _ _ - _ _ - _ _"
             />
 
-            <button type="submit">
+            <button class="button button_primary" type="submit" data-application-submit>
               Перезвоните мне
             </button>
 
-            <input type="checkbox" name="checkbox" id="input-checkbox" checked>
+            <input 
+              type="checkbox"
+              class="visually-hidden application__checkbox" 
+              name="checkbox" 
+              id="input-checkbox"
+              data-application-checkbox 
+              checked>
 
-            <label for="input-checkbox">
+            <label class="application__label" for="input-checkbox">
               <!-- класс active -->
-              Нажимая кнопку вы соглашаетесь с <br />
-              условиями <em>Политики конфиденциальности</em>
+              <span>Нажимая кнопку вы соглашаетесь с <br />
+                условиями <em class="application__accent">Политики конфиденциальности</em>
+              </span>
             </label>
           </form>
         </div>
 
-        <div class="popup__message">
+        <div class="application__message" data-application-message>
           Заявка успешно отправлена!
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" data-map>
+      <div class="popup__container" data-popup-container></div>
+
+      <div class="popup__content popup-map">
+        <button class="popup__button" type="button" data-popup-close>
+          <img class="popup__icon" src="./assets/icons/close.svg" alt="Иконка закрытия." />
+        </button>
+
+        <div class="popup-map__body" data-popup-content>
+          <iframe style="width: 100%; height: 100%" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab1ca026bc363b8069abe9e69776a90a2a809b50bef342f2797cbbc891301be6d&amp;source=constructor" frameborder="0"></iframe>
         </div>
       </div>
     </div>

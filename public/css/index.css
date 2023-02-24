@@ -23,7 +23,8 @@
     --font-md: calc(var(--size-base)*1.25); /* 20px */
     --font-lg: calc(var(--size-base)*1.5); /* 24px */
     --font-xl: calc(var(--size-base)*1.69); /* 27px */
-    --font-xxl: calc(var(--size-base)*4.06); /* 65px */
+    --font-xxl: calc(var(--size-base)*2); /* 32px */
+    --font-largest: calc(var(--size-base)*4.06); /* 65px */
 
     /* line height */
     --height-smallest: 1.36;
@@ -40,6 +41,7 @@
     --white: #FFFFFF;
     --red: #FD2016;
     --lightgray: #EFEFEF;
+    --accent-gray: #B0B0B1;
     --darkgray: #929292;
     --green: #20C863;
 
@@ -52,6 +54,7 @@
     --indent-14: calc(var(--size-base)*0.875);
     --indent-16: var(--size-base);
     --indent-18: calc(var(--size-base)*1.125);
+    --indent-20: calc(var(--size-base)*1.25);
     --indent-23: calc(var(--size-base)*1.4375);
     --indent-25: calc(var(--size-base)*1.5625);
     --indent-28: calc(var(--size-base)*1.75);
@@ -69,12 +72,14 @@
 
     /* width */
     --scrollbar-width: calc(var(--size-base)*8.75);
+    --checkbox-icon-width: calc(var(--size-base)*0.375);
 
     /* height */
     --scrollbar-height: calc(var(--size-base)*30.5);
 
     /* radius */
     --button-radius: calc(var(--size-base)*31.25);
+    --checkbox-radius: calc(var(--size-base)*0.3125);
 }
 
 /**
@@ -129,6 +134,19 @@ p {
 
 em {
     font-style: normal;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /**
@@ -370,7 +388,7 @@ em {
 } 
 
 .hero__heading {
-    font-size: var(--font-xxl);
+    font-size: var(--font-largest);
     line-height: var(--height-xxs);
     font-weight: var(--weight-bold);
     max-width: 1011px; /*Костыль! */
@@ -432,6 +450,11 @@ em {
     margin-right: var(--indent-14);
 }
 
+.button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
 /**
  * Benefits
  */
@@ -480,3 +503,141 @@ em {
     margin-bottom: var(--indent-18);
 }
 
+/**
+ * Popup
+ */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 100%;    
+}
+
+.popup_active {
+    display: block;
+}
+
+.popup__container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    background: var(--black);
+    opacity: 0.7;
+}
+
+.popup__content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    padding: var(--indent-45);
+}
+
+.popup__button {
+    position: absolute;
+    right: var(--indent-37);
+    top: var(--indent-37);
+}
+
+/**
+ * Application
+ */
+.application {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    max-width: 500px; /*Костыль! */
+    width: 100%;
+}
+
+.application__group_disabled {
+    display: none;
+}
+
+.application__heading {
+    line-height: var(--height-smallest);
+    font-weight: var(--weight-regular);
+    font-size: var(--font-xxl);
+    margin-bottom: var(--indent-16);
+}
+
+.application__text {
+    line-height: var(--height-xs);
+    margin-bottom: var(--indent-32);
+}
+
+.application__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.application__tooltip {
+    line-height: var(--height-smallest);
+    font-size: var(--font-sm);
+    margin-bottom: var(--indent-16);
+}
+
+.application__input {
+    text-align: center;
+    outline: none;
+    border-radius: var(--button-radius);
+    padding: var(--indent-25) var(--indent-45);
+    color: var(--accent-gray);
+    line-height: var(--height-xs);
+    margin-bottom: var(--indent-25);
+} 
+
+.application__label {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: var(--indent-14);
+    font-size: var(--font-sm);
+    line-height: var(--height-smallest);
+    margin-top: var(--indent-25);
+    margin-bottom: var(--indent-32);
+    cursor: pointer;
+}
+
+.application__label::before {
+    content: '';
+    width: var(--indent-20);
+    height: var(--indent-20);
+    background: var(--red);
+    border-radius: var(--checkbox-radius);
+}
+
+.application__checkbox:checked + .application__label:before {
+    background-image: url('../assets/icons/checkbox.svg');
+    background-repeat: no-repeat;
+    background-size: var(--checkbox-icon-width);
+    background-position: 50%;
+}
+
+.application__accent {
+    color: var(--red);
+}
+
+.application__message {
+    margin-top: var(--indent-45);
+    display: none;
+}
+
+.application__message_active {
+    display: block;
+}
+
+/**
+ * Popup map
+ */
+.popup-map {
+    width: 95%;
+    height: 95%;
+}
+
+.popup-map__body {
+    height: 100%;
+    margin-top: var(--indent-45);
+}
