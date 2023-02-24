@@ -11,7 +11,6 @@ class Popup {
 		this.content = this.element.querySelector('[data-popup-content]')
 
 		this.contentCheck()
-
 		this.element.classList.add('popup_active')
 
 	}
@@ -81,17 +80,14 @@ class PopupApplication {
 	}
 }
 
-
 class MenuMobile {
 	constructor() {
 		this.header = document.querySelector('[data-header]')
 		this.hero = document.querySelector('[data-hero]')
 		this.container = document.querySelector('[data-container]')
 		this.button = document.querySelector('[data-mobile-button]')
-		console.log(this.button)
 
 		this.state = true
-
 		this.initEvents()
 	}
 
@@ -131,6 +127,5 @@ const popupMap = new Popup(document.querySelector('[data-map]'))
 const miniMap = document.querySelector('[data-map-body]')
 
 miniMap.addEventListener('click', () => {
-	console.log('test')
 	popupMap.openApplication()
 })

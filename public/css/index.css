@@ -79,6 +79,7 @@
     --hero-width: calc(var(--size-base)*96.875);
     --heading-width: calc(var(--size-base)*63.1875);
     --buttons-width: calc(var(--size-base)*51.375);
+    --buttons-mobile-width: 18.75rem;
     --application-width: calc(var(--size-base)*31.25);
     --logo-width: calc(var(--size-base)*13.3125);
     --header-image-width: calc(var(--size-base)*2.1875);
@@ -1005,6 +1006,7 @@ a:hover, button:hover {
 
     .hero__buttons {
         flex-direction: column;
+        max-width: var(--buttons-mobile-width);
     }
 
     .button__text {

@@ -40,6 +40,7 @@
             <a class="logo" href="#">
               <img class="logo__image" src="./assets/logo.svg" alt="На главную страницу." />
             </a>
+
             <div class="header__group">
               <div class="header__item header__item_summary">
                   Ремонтируем двигатели <br />
@@ -50,20 +51,22 @@
                 <img class="header__icon header__image" src="./assets/icons/map.svg" alt="Местоположение на карте." />
 
                 <address class="address">
-                  Адрес автоцентра: <span class="address__city">Москва,</span><br/> 
+                  Адрес автоцентра: <span class="address__city">Москва,</span> <br/> 
                   <span class="address__accent header__text-mobile">Шоссейный проезд, с4 а/2</span>
                 </address>
               </div>
 
               <div class="map" data-map-body>
-                <button class="header__item header__item_bold">
+                <button type="button" class="header__item header__item_bold">
                   <img class="header__icon" src="./assets/icons/map-marker.svg" alt="Маркер местоположения." />
 
                   <span class="header__text">Смотреть на карте</span>
                 </button>
 
                 <div class="map__body">
-                  <iframe style="width: 100%; height: 100%" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab1ca026bc363b8069abe9e69776a90a2a809b50bef342f2797cbbc891301be6d&amp;source=constructor" frameborder="0"></iframe>
+                  <iframe style="width: 100%; height: 100%" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab1ca026bc363b8069abe9e69776a90a2a809b50bef342f2797cbbc891301be6d&amp;source=constructor" frameborder="0">
+      
+                  </iframe>
                 </div>
               </div>
 
@@ -270,6 +273,7 @@
         <button class="popup__button" type="button" data-popup-close>
           <img class="popup__icon" src="./assets/icons/close.svg" alt="Иконка закрытия." />
         </button>
+
         <div class="application__group" data-popup-content>
           <h2 class="application__heading">
             Быстро оставить <br /> заявку
@@ -301,14 +305,13 @@
 
             <input 
               type="checkbox"
-              class="visually-hidden application__checkbox" 
+              class="application__checkbox" 
               name="checkbox" 
               id="input-checkbox"
               data-application-checkbox 
               checked>
 
             <label class="application__label" for="input-checkbox">
-              <!-- класс active -->
               <span>Нажимая кнопку вы соглашаетесь с <br />
                 условиями <em class="application__accent">Политики конфиденциальности</em>
               </span>
@@ -331,7 +334,8 @@
         </button>
 
         <div class="popup-map__body" data-popup-content>
-          <iframe style="width: 100%; height: 100%" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab1ca026bc363b8069abe9e69776a90a2a809b50bef342f2797cbbc891301be6d&amp;source=constructor" frameborder="0"></iframe>
+          <iframe style="width: 100%; height: 100%" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab1ca026bc363b8069abe9e69776a90a2a809b50bef342f2797cbbc891301be6d&amp;source=constructor" frameborder="0">
+          </iframe>
         </div>
       </div>
     </div>
