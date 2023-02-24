@@ -24,6 +24,7 @@
     --font-lg: calc(var(--size-base)*1.5); /* 24px */
     --font-xl: calc(var(--size-base)*1.69); /* 27px */
     --font-xxl: calc(var(--size-base)*2); /* 32px */
+    --font-mobile: calc(var(--size-base)*3); /* 48px */
     --font-largest: calc(var(--size-base)*4.06); /* 65px */
 
     /* line height */
@@ -50,6 +51,7 @@
     --indent-2: calc(var(--size-base)*0.125);
     --indent-4: calc(var(--size-base)*0.25);
     --indent-6: calc(var(--size-base)*0.375);
+    --indent-8: calc(var(--size-base)*0.5);
     --indent-10: calc(var(--size-base)*0.625);
     --indent-14: calc(var(--size-base)*0.875);
     --indent-16: var(--size-base);
@@ -88,6 +90,7 @@
     --button-secondary-icon-width: calc(var(--size-base)*1.875);
     --benefits-icon-width: calc(var(--size-base)*0.8125);
     --close-icon-width: calc(var(--size-base)*1.25);
+    --logo-mobile-width: 5.75rem;
 
     /* height */
     --scrollbar-height: calc(var(--size-base)*30.5);
@@ -197,7 +200,7 @@ em {
     font-weight: var(--weight-bold);
     white-space: nowrap;
     color: var(--lightgray);
-    transform: rotate(-90deg) translate(-50%, 0);
+    transform: rotate(-90deg) translate(-65%, 0);
     margin-bottom: var(--indent-81);
 }
 
@@ -315,6 +318,10 @@ em {
 
 .header__navigation {
     flex-grow: 1;
+}
+
+.header__button {
+    display: none;
 }
 
 /**
@@ -686,4 +693,179 @@ em {
 .popup-map__body {
     height: 100%;
     margin-top: var(--indent-45);
+}
+
+@media only screen and (max-width: 992px) {
+    :root {
+        --size-base: 1rem;
+    }
+
+    .scrollbar {
+        display: none;
+    }
+
+    .container {
+        background-image: url('../assets/background-mobile.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .container__main {
+        padding: 0 var(--indent-16);
+        background: 
+            linear-gradient(180deg, rgba(22, 26, 30, 0.75) 0%, rgba(22, 26, 30, 0.2925) 36.3%), 
+            linear-gradient(270deg, rgba(22, 26, 30, 0) 0%, rgba(22, 26, 30, 0.6375) 79.17%);
+    }
+
+    .header {
+        padding-right: 0;
+    }
+
+    .header__group {
+        display: none;
+    }
+
+    .header__section_top {
+        border-bottom: none;
+        justify-content: space-between;
+    }
+
+    .header__section_bottom {
+        display: none;
+    }
+
+    .header__button {
+        display: block;
+        fill: var(--white);
+        cursor: pointer;
+    }
+
+    .hero {
+        background: none;
+    }
+
+    .hero__container {
+        padding-top: var(--indent-32);
+        padding-right: 0;
+    }
+
+    .hero__content {
+        background: none;
+        padding-left: 0;
+    }
+
+    .hero__heading {
+        font-size: var(--font-mobile);
+    }
+
+    .contacts {
+        margin-left: 0;
+        color: var(--white);
+    }
+
+    .contacts__icon {
+        display: none;
+    }
+
+    .contacts__button {
+        color: var(--white);
+    }
+
+    .benefits {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .benefits__item {
+        padding-left: var(--indent-8);
+        padding-right: var(--indent-8);
+        border-left: none;
+    }
+
+    .benefits__item:last-of-type .benefits__text {
+        margin-right: auto;
+    }
+
+    .popup__content {
+        background: var(--green);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .header__button {
+        width: var(--indent-16);
+        height: var(--indent-16);
+        margin-left: auto;
+    }
+
+    .logo__image {
+        width: var(--logo-mobile-width);
+    }
+
+    .hero__container {
+        padding-top: var(--indent-10);
+    }
+
+    .hero__heading {
+        font-size: var(--font-md);
+        max-width: 70%;
+    }
+
+    .hero__small {
+        color: var(--green);
+    }
+
+    .hero__caption {
+        margin: var(--indent-28) 0;
+        font-size: var(--font-xs);
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+    }
+
+    .button__icon {
+        display: none;
+    }
+
+    .contacts {
+        margin: 0 auto;
+    }
+
+    .contacts__phone {
+        font-size: var(--font-sm);
+        margin: 0 auto;
+    }
+
+    .benefits {
+        margin: var(--indent-49) -1rem 0;
+        padding-top: var(--indent-16);
+        background: var(--white);
+        color: var(--black);
+    }
+
+    .benefits__item {
+        width: 50%;
+    }
+
+    .benefits__item:nth-of-type(2) {
+        order: 4;
+    }
+
+    .benefits__text {
+        margin-left: 0;
+    }
+
+    .popup__content {
+        padding: var(--indent-16);
+    }
+
+    .popup__button {
+        right: var(--indent-16);
+        top: var(--indent-16);
+    }
+
+    .application__heading {
+        margin-top: var(--indent-32);
+    }
 }
