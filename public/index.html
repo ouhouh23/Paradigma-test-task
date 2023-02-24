@@ -34,14 +34,14 @@
         </div>
       </div>
 
-      <div class="container__main">
-        <header class="header">
+      <div class="container__main" data-container>
+        <header class="header" data-header>
           <div class="header__section header__section_top">
             <a class="logo" href="#">
               <img class="logo__image" src="./assets/logo.svg" alt="На главную страницу." />
             </a>
             <div class="header__group">
-              <div class="header__item">
+              <div class="header__item header__item_summary">
                   Ремонтируем двигатели <br />
                   Hyundai и Kia с 2012 года
               </div>
@@ -51,7 +51,7 @@
 
                 <address class="address">
                   Адрес автоцентра: <span class="address__city">Москва,</span><br/> 
-                  <span class="header__text-mobile">Шоссейный проезд, с4 а/2</span>
+                  <span class="address__accent header__text-mobile">Шоссейный проезд, с4 а/2</span>
                 </address>
               </div>
 
@@ -79,20 +79,32 @@
                 </div>
               </button>
 
-              <div class="header__item">       
-                <span>Задайте вопрос, <br /> мы сейчас онлайн</span>
+              <div class="header__item social">
+                <img class="header__icon social__image" src="./assets/icons/avatar.svg" alt="Портрет сотрудника." />
 
-                <a class="header__socials" href="https://www.whatsapp.com/?lang=ru">
-                  <img class="header__image" src="./assets/icons/whatsapp.svg" alt="Cсылка на вотсапп" />
-                </a>
+                <div class="social__group">
+                  <span class="social__text_desktop">Задайте вопрос, <br /> мы сейчас онлайн</span>
 
-                <a class="header__socials" href="https://web.telegram.org/k/">
-                  <img class="header__image" src="./assets/icons/telegram.svg" alt="Cсылка на телеграм." />
-                </a>
-                
-                <a class="header__socials" href="https://www.viber.com/ru/">   
-                  <img class="header__image" src="./assets/icons/viber.svg" alt="Cсылка на вайбер." />
-                </a>
+                  <span class="social__text_mobile">Есть вопрос? <br />
+                    <span class="social__accent">Задайте его нашему <br /> 
+                      мастеру онлайн
+                    </span>
+                  </span>
+
+                  <div class="social__container">
+                    <a class="header__socials" href="https://www.whatsapp.com/?lang=ru">
+                      <img class="header__image" src="./assets/icons/whatsapp.svg" alt="Cсылка на вотсапп" />
+                    </a>
+
+                    <a class="header__socials" href="https://web.telegram.org/k/">
+                      <img class="header__image" src="./assets/icons/telegram.svg" alt="Cсылка на телеграм." />
+                    </a>
+                    
+                    <a class="header__socials" href="https://www.viber.com/ru/">   
+                      <img class="header__image" src="./assets/icons/viber.svg" alt="Cсылка на вайбер." />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -116,7 +128,7 @@
               </button>
             </div>
 
-            <svg class="header__button" viewBox="0 0 100 80" width="32" height="32">
+            <svg class="header__button" viewBox="0 0 100 80" width="32" height="32" data-mobile-button>
                 <rect width="100" height="13"></rect>
                 <rect y="30" width="100" height="13"></rect>
                 <rect y="60" width="100" height="13"></rect>
@@ -132,6 +144,11 @@
 
                 <li>
                   <a href="#">Услуги</a>
+
+                  <div class="navigation__group">
+                    Ремонт двигателей KIA <br />
+                    Ремонт двигателей HYundai
+                  </div>
                 </li>
 
                 <li>
@@ -167,7 +184,7 @@
         </header>
 
         <main>
-          <section class="hero">
+          <section class="hero" data-hero>
             <div class="hero__content">
               <div class="hero__container">
                 <h1 class="hero__heading">
@@ -189,7 +206,7 @@
                   <button type="button" class="button button_secondary">
                     <img class="button__icon" src="./assets/icons/whatsapp2.svg" alt="" />
 
-                    <span>Узнайте стоимость по <span class="hero__small">WhatsApp</span>
+                    <span class="button__text">Узнайте стоимость по <span class="hero__small">WhatsApp</span>
 
                   </button>
                 </div>

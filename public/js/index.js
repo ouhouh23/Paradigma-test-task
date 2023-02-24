@@ -81,7 +81,51 @@ class PopupApplication {
 	}
 }
 
+
+class MenuMobile {
+	constructor() {
+		this.header = document.querySelector('[data-header]')
+		this.hero = document.querySelector('[data-hero]')
+		this.container = document.querySelector('[data-container]')
+		this.button = document.querySelector('[data-mobile-button]')
+		console.log(this.button)
+
+		this.state = true
+
+		this.initEvents()
+	}
+
+	openMenu() {
+		this.header.classList.add('header_mobile')
+		this.hero.classList.add('hero_disabled')
+		this.container.classList.add('container__main_mobile')
+	}
+
+	closeMenu() {
+		this.header.classList.remove('header_mobile')
+		this.hero.classList.remove('hero_disabled')
+		this.container.classList.remove('container__main_mobile')
+	}
+
+	toggle() {
+		if (this.state) {
+			this.openMenu()
+			this.state = false
+		}
+
+		else {
+			this.closeMenu()
+			this.state = true
+		}
+	}
+
+	initEvents() {
+		this.button.addEventListener('click', this.toggle.bind(this))
+	}
+}
+
 const popupApplication = new PopupApplication('[data-application-button]', '[data-application]')
+const menuMobile = new MenuMobile()
 const popupMap = new Popup(document.querySelector('[data-map]'))
 
 const miniMap = document.querySelector('[data-map-body]')
