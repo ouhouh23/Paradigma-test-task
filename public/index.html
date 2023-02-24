@@ -34,7 +34,7 @@
         </div>
       </div>
 
-      <div>
+      <div class="container__main">
         <header class="header">
           <div class="header__section header__section_top">
             <a class="logo" href="#">
@@ -162,61 +162,79 @@
 
         <main>
           <section class="hero">
-            <img class="hero__image" src="./assets/background.png" alt="" />
-
+            <!-- <img class="hero__image" src="./assets/background.png" alt="" /> -->
             <div class="hero__content">
-              <h1 class="hero__heading">
-                Профессиональный ремонт двигателей HYUNDAI и KIA с гарантией 1 год за 4-7 дней
-              </h1>
+              <div class="hero__container">
+                <h1 class="hero__heading">
+                  Профессиональный <em class="hero__accent">ремонт двигателей</em> HYUNDAI и KIA 
+                  <em class="hero__accent">с гарантией 1 год</em> за 4-7 дней
+                </h1>
 
-              <span class="hero__caption">
-                в специализированном автосервисе полного цикла
-              </span>
+                <span class="hero__caption">
+                  в специализированном автосервисе полного цикла
+                </span>
 
-              <div class="hero__buttons">
-                <button type="button">
-                  <span>Начать расчет стоимости ремонта вашего двигателя</span>
+                <div class="hero__buttons">
+                  <button type="button" class="button button_primary">
+                    <span class="button__text">Начать расчет стоимости ремонта вашего двигателя</span>
 
-                  <img src="./assets/icons/arrow-right.svg" alt="" />
-                </button>
+                    <img class="button__icon" src="./assets/icons/arrow-right.svg" alt="" />
+                  </button>
 
-                <button type="button">
-                  <img src="./assets/icons/whatsapp2.svg" alt="" />
+                  <button type="button" class="button button_secondary">
+                    <img class="button__icon" src="./assets/icons/whatsapp2.svg" alt="" />
 
-                  <span>Узнайте стоимость по WhatsApp</span>
+                    <span>Узнайте стоимость по WhatsApp</span>
 
-                </button>
+                  </button>
+                </div>
+
+                <ul class="benefits">
+                  <li class="benefits__item">
+                    <div class="benefits__text">
+                      <img class="benefits__icon" src="./assets/icons/tick.svg" alt="" />
+
+                      <p>
+                        <em class="benefits__accent">Без предоплаты.</em> <br />
+                        Оплата после ремонта
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="benefits__item">
+                    <div class="benefits__text">
+                      <img class="benefits__icon" src="./assets/icons/tick.svg" alt="" />
+
+                      <p>
+                        <em class="benefits__accent">Работаем официально</em><br />
+                        c оформлением <br /> заказ-нарядов и чеков
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="benefits__item">
+                    <div class="benefits__text">
+                      <img class="benefits__icon" src="./assets/icons/tick.svg" alt="" />
+
+                      <p>
+                        <em class="benefits__accent">Оригинальные <br /> запчасти</em>
+                      </p>
+                    </div>
+                  </li>
+
+                  <li class="benefits__item">
+                    <div class="benefits__text">
+                      <img class="benefits__icon" src="./assets/icons/tick.svg" alt="" />
+
+                      <p>
+                        <em class="benefits__accent">Лучшие цены на рынке</em> благодаря прямым<br /> 
+                        поставкам запчастей и собственному цеху <br />
+                        механической обработки
+                      </p>
+                    </div>
+                  </li>
+                </ul>
               </div>
-
-              <ul class="benefits">
-                <li class="benefits__item">
-                  <p class="benefits__text">
-                    <em class="benefits__accent">Без предоплаты.</em> <br />
-                    Оплата после ремонта
-                  </p>
-                </li>
-
-                <li class="benefits__item">
-                  <p class="benefits__text">
-                    <em class="benefits__accent">Работаем официально</em> c <br />
-                    оформлением заказ-нарядов и чеков
-                  </p>
-                </li>
-
-                <li class="benefits__item">
-                  <p class="benefits__text">
-                    <em class="benefits__accent">Оригинальные запчасти</em>
-                  </p>
-                </li>
-
-                <li class="benefits__item">
-                  <p class="benefits__text">
-                    <em class="benefits__accent">Лучшие цены на рынке</em> благодаря прямым<br /> 
-                    поставкам запчастей и собственному цеху <br />
-                    механической обработки
-                  </p>
-                </li>
-              </ul>
             </div>
           </section>
         </main>
