@@ -3,7 +3,7 @@
  */
 :root {
     /* size converter */
-    --size-base: 1rem;
+    --size-base: 0.8333vw;
 
 	/* font family */
     --font-primary: 'Manrope', sans-serif;
@@ -73,6 +73,21 @@
     /* width */
     --scrollbar-width: calc(var(--size-base)*8.75);
     --checkbox-icon-width: calc(var(--size-base)*0.375);
+    --section-width: calc(var(--size-base)*102.8125);
+    --hero-width: calc(var(--size-base)*96.875);
+    --heading-width: calc(var(--size-base)*63.1875);
+    --buttons-width: calc(var(--size-base)*51.375);
+    --application-width: calc(var(--size-base)*31.25);
+    --logo-width: calc(var(--size-base)*13.3125);
+    --header-image-width: calc(var(--size-base)*2.1875);
+    --header-icon-width: calc(var(--size-base)*0.75);
+    --contacts-icon-width: calc(var(--size-base)*0.5625);
+    --contacts-image-width: calc(var(--size-base)*0.375);
+    --mouse-icon-width: calc(var(--size-base)*1.125);
+    --button-primary-icon-width: calc(var(--size-base)*1.375);
+    --button-secondary-icon-width: calc(var(--size-base)*1.875);
+    --benefits-icon-width: calc(var(--size-base)*0.8125);
+    --close-icon-width: calc(var(--size-base)*1.25);
 
     /* height */
     --scrollbar-height: calc(var(--size-base)*30.5);
@@ -91,6 +106,7 @@
 
 body {
     font-family: var(--font-primary);
+    font-size: var(--font-base);
     color: var(--black);
 }
 
@@ -198,6 +214,7 @@ em {
 
 .scrollbar__image {
     margin: 0 auto;
+    width: var(--mouse-icon-width);
 }
 
 .scrollbar__indicator {
@@ -217,18 +234,22 @@ em {
     margin-right: var(--indent-23);
 }
 
+.logo__image {
+    width: var(--logo-width);
+}
+
 /**
  * Header
  */
 .header {
     font-size: var(--font-xs);
     line-height: var(--height-smallest);
-    padding-right: 1rem;
+    padding-right: var(--indent-16);
 }
 
 .header__section {
     display: flex;
-    max-width: 102.8125rem;  /* vw! */
+    max-width: var(--section-width);
     padding: var(--indent-23) 0;
 }
 
@@ -257,6 +278,11 @@ em {
 
 .header__icon {
     margin-right: var(--indent-10);
+    width: var(--header-icon-width);
+}
+
+.header__image {
+    width: var(--header-image-width);
 }
 
 .header__text {
@@ -337,6 +363,14 @@ em {
     margin-right: var(--indent-6);
 }
 
+.contacts__icon {
+    width: var(--contacts-icon-width);
+}
+
+.contacts__image {
+    width: var(--contacts-image-width);
+}
+
 .contacts__phone {
     margin: var(--indent-6) 0;
     font-size: var(--font-md);
@@ -384,14 +418,14 @@ em {
 .hero__container {
     margin: 0 auto;
     padding: var(--indent-128) var(--indent-25) 0 0;
-    max-width: 1550px; /*Костыль! */
+    max-width: var(--hero-width);
 } 
 
 .hero__heading {
     font-size: var(--font-largest);
     line-height: var(--height-xxs);
     font-weight: var(--weight-bold);
-    max-width: 1011px; /*Костыль! */
+    max-width: var(--heading-width);
 }
 
 .hero__accent {
@@ -406,7 +440,7 @@ em {
 }
 
 .hero__buttons {
-    max-width: 822px; /*Костыль! */
+    max-width: var(--buttons-width);
     display: flex;
     gap: var(--indent-23);
 }
@@ -432,6 +466,11 @@ em {
     background: var(--red);
 }
 
+.button_primary .button__icon {
+    margin-right: var(--indent-14);
+    width: var(--button-primary-icon-width);
+}
+
 .button_primary:hover .button__icon {
     transform: rotate(45deg);
     transition: 0.5s;
@@ -448,6 +487,7 @@ em {
 
 .button_secondary .button__icon {
     margin-right: var(--indent-14);
+    width: var(--button-secondary-icon-width);
 }
 
 .button:disabled {
@@ -500,6 +540,7 @@ em {
 }
 
 .benefits__icon {
+    width: var(--benefits-icon-width);
     margin-bottom: var(--indent-18);
 }
 
@@ -527,6 +568,10 @@ em {
     opacity: 0.7;
 }
 
+.popup__icon {
+    width: var(--close-icon-width);
+}
+
 .popup__content {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -548,7 +593,7 @@ em {
     background: var(--black);
     color: var(--white);
     text-align: center;
-    max-width: 500px; /*Костыль! */
+    max-width: var(--application-width);
     width: 100%;
 }
 
@@ -582,6 +627,7 @@ em {
 .application__input {
     text-align: center;
     outline: none;
+    border: none;
     border-radius: var(--button-radius);
     padding: var(--indent-25) var(--indent-45);
     color: var(--accent-gray);
